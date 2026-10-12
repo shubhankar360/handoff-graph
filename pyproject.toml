@@ -1,0 +1,10 @@
+[project]
+name = "handoff-graph"
+version = "0.1.0"
+description = "A LangGraph orchestration layer for card support, graded on what it did"
+requires-python = ">=3.10"
+dependencies = ["langgraph>=1.0", "anthropic", "fastapi", "uvicorn"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
