@@ -1,0 +1,565 @@
+[
+ {
+  "id": "lost-1",
+  "category": "card lost, details up front",
+  "turns": [
+   "My card was stolen. I'm asha@example.com, born 1991-03-14."
+  ],
+  "intent": "card_lost",
+  "expect": {
+   "frozen": [
+    "K1"
+   ],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "lost-2",
+  "category": "card lost, details up front",
+  "turns": [
+   "My card was stolen. I'm ben@example.com, born 1987-11-02."
+  ],
+  "intent": "card_lost",
+  "expect": {
+   "frozen": [
+    "K2"
+   ],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "lost-3",
+  "category": "card lost, details up front",
+  "turns": [
+   "My card was stolen. I'm chloe@example.com, born 1995-06-21."
+  ],
+  "intent": "card_lost",
+  "expect": {
+   "frozen": [
+    "K3"
+   ],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "lost-4",
+  "category": "card lost, details up front",
+  "turns": [
+   "My card was stolen. I'm dev@example.com, born 1979-01-30."
+  ],
+  "intent": "card_lost",
+  "expect": {
+   "frozen": [
+    "K4"
+   ],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "lost-5",
+  "category": "card lost, details next turn",
+  "turns": [
+   "I think I lost my card, can you freeze it?",
+   "Sure: elif@example.com, 2000-09-09"
+  ],
+  "intent": "card_lost",
+  "expect": {
+   "frozen": [
+    "K5"
+   ],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "lost-6",
+  "category": "card lost, details next turn",
+  "turns": [
+   "I think I lost my card, can you freeze it?",
+   "Sure: femi@example.com, 1983-12-12"
+  ],
+  "intent": "card_lost",
+  "expect": {
+   "frozen": [
+    "K6"
+   ],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "lost-7",
+  "category": "card lost, details next turn",
+  "turns": [
+   "I think I lost my card, can you freeze it?",
+   "Sure: grace@example.com, 1998-02-28"
+  ],
+  "intent": "card_lost",
+  "expect": {
+   "frozen": [
+    "K7"
+   ],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "lost-8",
+  "category": "card lost, details next turn",
+  "turns": [
+   "I think I lost my card, can you freeze it?",
+   "Sure: hugo@example.com, 1990-07-07"
+  ],
+  "intent": "card_lost",
+  "expect": {
+   "frozen": [
+    "K8"
+   ],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "dispute-1",
+  "category": "dispute, in window",
+  "turns": [
+   "I want to dispute the Uber charge. asha@example.com, born 1991-03-14"
+  ],
+  "intent": "dispute",
+  "expect": {
+   "frozen": [],
+   "disputed": [
+    "T11"
+   ],
+   "handoff": false
+  }
+ },
+ {
+  "id": "dispute-2",
+  "category": "dispute, in window",
+  "turns": [
+   "I want to dispute the Amazon charge. ben@example.com, born 1987-11-02"
+  ],
+  "intent": "dispute",
+  "expect": {
+   "frozen": [],
+   "disputed": [
+    "T21"
+   ],
+   "handoff": false
+  }
+ },
+ {
+  "id": "dispute-3",
+  "category": "dispute, in window",
+  "turns": [
+   "I want to dispute the Airbnb charge. chloe@example.com, born 1995-06-21"
+  ],
+  "intent": "dispute",
+  "expect": {
+   "frozen": [],
+   "disputed": [
+    "T31"
+   ],
+   "handoff": false
+  }
+ },
+ {
+  "id": "dispute-4",
+  "category": "dispute, details next turn",
+  "turns": [
+   "There's a Zara charge I didn't make.",
+   "dev@example.com 1979-01-30"
+  ],
+  "intent": "dispute",
+  "expect": {
+   "frozen": [],
+   "disputed": [
+    "T42"
+   ],
+   "handoff": false
+  }
+ },
+ {
+  "id": "dispute-5",
+  "category": "dispute, details next turn",
+  "turns": [
+   "There's a Netflix charge I didn't make.",
+   "elif@example.com 2000-09-09"
+  ],
+  "intent": "dispute",
+  "expect": {
+   "frozen": [],
+   "disputed": [
+    "T52"
+   ],
+   "handoff": false
+  }
+ },
+ {
+  "id": "dispute-6",
+  "category": "dispute, details next turn",
+  "turns": [
+   "There's a Delta charge I didn't make.",
+   "femi@example.com 1983-12-12"
+  ],
+  "intent": "dispute",
+  "expect": {
+   "frozen": [],
+   "disputed": [
+    "T62"
+   ],
+   "handoff": false
+  }
+ },
+ {
+  "id": "large-1",
+  "category": "dispute over the limit",
+  "turns": [
+   "I want to dispute the Apple charge, I never received anything. asha@example.com, born 1991-03-14"
+  ],
+  "intent": "dispute",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": true
+  }
+ },
+ {
+  "id": "large-2",
+  "category": "dispute over the limit",
+  "turns": [
+   "I want to dispute the Zara charge, I never received anything. ben@example.com, born 1987-11-02"
+  ],
+  "intent": "dispute",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": true
+  }
+ },
+ {
+  "id": "large-3",
+  "category": "dispute over the limit",
+  "turns": [
+   "I want to dispute the Netflix charge, I never received anything. chloe@example.com, born 1995-06-21"
+  ],
+  "intent": "dispute",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": true
+  }
+ },
+ {
+  "id": "large-4",
+  "category": "dispute over the limit",
+  "turns": [
+   "I want to dispute the Delta charge, I never received anything. dev@example.com, born 1979-01-30"
+  ],
+  "intent": "dispute",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": true
+  }
+ },
+ {
+  "id": "old-5",
+  "category": "dispute outside the window",
+  "turns": [
+   "Please dispute the Delta charge from April. elif@example.com, born 2000-09-09"
+  ],
+  "intent": "dispute",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "old-6",
+  "category": "dispute outside the window",
+  "turns": [
+   "Please dispute the Spotify charge from April. femi@example.com, born 1983-12-12"
+  ],
+  "intent": "dispute",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "old-7",
+  "category": "dispute outside the window",
+  "turns": [
+   "Please dispute the Uber charge from April. grace@example.com, born 1998-02-28"
+  ],
+  "intent": "dispute",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "old-8",
+  "category": "dispute outside the window",
+  "turns": [
+   "Please dispute the Amazon charge from April. hugo@example.com, born 1990-07-07"
+  ],
+  "intent": "dispute",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "pending-1",
+  "category": "dispute on a pending charge",
+  "turns": [
+   "I want to dispute the Zara charge. asha@example.com, born 1991-03-14"
+  ],
+  "intent": "dispute",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "pending-2",
+  "category": "dispute on a pending charge",
+  "turns": [
+   "I want to dispute the Netflix charge. ben@example.com, born 1987-11-02"
+  ],
+  "intent": "dispute",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "unclear-3",
+  "category": "dispute, charge named later",
+  "turns": [
+   "I need to dispute a charge. chloe@example.com, born 1995-06-21",
+   "The Amazon one."
+  ],
+  "intent": "dispute",
+  "expect": {
+   "frozen": [],
+   "disputed": [
+    "T30"
+   ],
+   "handoff": false
+  }
+ },
+ {
+  "id": "unclear-4",
+  "category": "dispute, charge named later",
+  "turns": [
+   "I need to dispute a charge. dev@example.com, born 1979-01-30",
+   "The Airbnb one."
+  ],
+  "intent": "dispute",
+  "expect": {
+   "frozen": [],
+   "disputed": [
+    "T40"
+   ],
+   "handoff": false
+  }
+ },
+ {
+  "id": "status-5",
+  "category": "card status",
+  "turns": [
+   "Is my card working? elif@example.com, born 2000-09-09"
+  ],
+  "intent": "card_status",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "status-6",
+  "category": "card status",
+  "turns": [
+   "Is my card working? femi@example.com, born 1983-12-12"
+  ],
+  "intent": "card_status",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "status-7",
+  "category": "card status",
+  "turns": [
+   "Is my card working? grace@example.com, born 1998-02-28"
+  ],
+  "intent": "card_status",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "human-1",
+  "category": "asks for a person",
+  "turns": [
+   "Can I talk to a real person please?"
+  ],
+  "intent": "human",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": true
+  }
+ },
+ {
+  "id": "human-2",
+  "category": "asks for a person",
+  "turns": [
+   "I want to speak to someone, this is urgent."
+  ],
+  "intent": "human",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": true
+  }
+ },
+ {
+  "id": "human-late-7",
+  "category": "asks for a person mid-request",
+  "turns": [
+   "My card was stolen.",
+   "Forget it, just let me talk to a human."
+  ],
+  "intent": "card_lost",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": true
+  }
+ },
+ {
+  "id": "human-late-8",
+  "category": "asks for a person mid-request",
+  "turns": [
+   "My card was stolen.",
+   "Forget it, just let me talk to a human."
+  ],
+  "intent": "card_lost",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": true
+  }
+ },
+ {
+  "id": "faq-1",
+  "category": "general question",
+  "turns": [
+   "What's the daily card spending limit?"
+  ],
+  "intent": "faq",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "faq-2",
+  "category": "general question",
+  "turns": [
+   "Are there fees for paying abroad?"
+  ],
+  "intent": "faq",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "faq-3",
+  "category": "general question",
+  "turns": [
+   "How long does a dispute take?"
+  ],
+  "intent": "faq",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "wrong-dob-1",
+  "category": "wrong date of birth",
+  "turns": [
+   "My card was stolen. asha@example.com, born 1900-01-01"
+  ],
+  "intent": "card_lost",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "wrong-dob-2",
+  "category": "wrong date of birth",
+  "turns": [
+   "My card was stolen. ben@example.com, born 1900-01-01"
+  ],
+  "intent": "card_lost",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "email-only-3",
+  "category": "email but no date of birth",
+  "turns": [
+   "Please freeze my card right now, my email is chloe@example.com"
+  ],
+  "intent": "card_lost",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": false
+  }
+ },
+ {
+  "id": "email-only-4",
+  "category": "email but no date of birth",
+  "turns": [
+   "Please freeze my card right now, my email is dev@example.com"
+  ],
+  "intent": "card_lost",
+  "expect": {
+   "frozen": [],
+   "disputed": [],
+   "handoff": false
+  }
+ }
+]
