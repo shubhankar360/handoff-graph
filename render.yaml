@@ -1,0 +1,11 @@
+# One-click deploy on Render: New > Blueprint > point it at this repo.
+# Leave ANTHROPIC_API_KEY empty to run the scripted planner.
+services:
+  - type: web
+    name: handoff-graph
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
